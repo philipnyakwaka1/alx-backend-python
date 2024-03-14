@@ -8,7 +8,7 @@ their sum as a float.
 from typing import List, Union
 
 
-def sum_mixed_list(mxd_list: List[Union[float, int]]) -> float:
+def sum_mixed_list(mxd_list: List[Union[int, float]]) -> float:
     """
     Finds the average sum of elements of a mixed list of ints and floats
     Args:
