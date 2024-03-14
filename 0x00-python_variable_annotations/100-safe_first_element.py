@@ -4,16 +4,15 @@
 This module augments the following code with the
 correct duck-typed annotations
 """
-from typing import Sequence, Any, Union
+from typing import Sequence, Any, Union, Optional
 
-
-def safe_first_element(lst: Sequence) -> Union[Any, None]:
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """
     Returns the first element of a sequence safely or None if
     the sequence is empty.
 
     Args:
-        lst (Sequence): The input sequence.
+        lst (Sequence[Any]): The input sequence.
 
     Returns:
         Union[Any, None]: The first element of the sequence,
