@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-concat = __import__('1-concat').concat
+import math
 
-str1 = "egg"
-str2 = "shell"
+floor = __import__('2-floor').floor
 
-print(concat(str1, str2) == "{}{}".format(str1, str2))
-print(concat.__annotations__)
+ans = floor(3.14)
+
+print(ans == math.floor(3.14))
+print(floor.__annotations__)
+print("floor(3.14) returns {}, which is a {}".format(ans, type(ans)))
