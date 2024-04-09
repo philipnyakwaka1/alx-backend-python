@@ -41,6 +41,16 @@ class TestGithubOrgClient(unittest.TestCase):
                 "https://api.github.com/users/google/repos",
             )
 
+    @parameterized.expand([
+        ({'license': {'key': "bsd-3-clause"}}, "bsd-3-clause", True),
+        ({'license': {'key': "bsl-1.0"}}, "bsd-3-clause", False),
+    ])
+    def test_has_license(self, repo, key, expected):
+        """Tests"""
+        client = GithubOrgClient("google")
+        check_lincense = client.has_license(repo, key)
+        self.assertEqual(check_lincense, expected)
+
 
 if __name__ == '__main__':
     unittest.main()
