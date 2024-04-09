@@ -82,12 +82,12 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
                                 side_effect=custom_payload_func)
         cls.get_patcher.start()
 
-    def test_for_repos_with_lincense(self):
+    def test_public_repos_with_license(self):
         """Tests"""
         result = GithubOrgClient("google").public_repos(license="apache-2.0")
         self.assertEqual(result, self.apache2_repos)
 
-    def test_all_public_repos(self):
+    def test_public_repos(self):
         """Tests"""
         result = GithubOrgClient("google").public_repos()
         self.assertEqual(result, self.expected_repos)
