@@ -10,7 +10,7 @@ def floor(n: float) -> int:
     Return the floor of a float
     Args:
         n (float): number whose floor is to be returned
-    Return:
+    Returns:
         int: floor of the argument
     """
 
